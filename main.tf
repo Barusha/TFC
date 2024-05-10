@@ -6,6 +6,14 @@ resource "aws_instance" "web" {
     Name = "web_server"
   }
   }
+resource "aws_instance" "web1" {
+  ami           = var.ami_id
+  instance_type = var.instance_type
+  #key_name = var.instance_keypair
+  tags = {
+    Name = "web_server1"
+  }
+  }
 
   /*resource "aws_s3_bucket" "s3 bucket"{
     bucket = "chembara4321"
